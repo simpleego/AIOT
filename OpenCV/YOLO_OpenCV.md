@@ -1,4 +1,4 @@
-# 📌 YOLO + OpenCV 연동 튜토리얼 (Python)
+# 📌 YOLO + OpenCV 연동 튜토리얼 (Python)  
 
 ---
 
