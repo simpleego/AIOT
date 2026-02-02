@@ -20,6 +20,7 @@ TCP/IP 프로토콜을 이용하여 서버 소켓을 구현, 클라이언트로�
 ## (4) UDP 소켓 프로그래밍  
 UDP는 TCP와 달리 연결 없이 데이터를 전송하는 프로토콜, 전송이 보장되지 않지만, 빠른 전송 속도, Python에서는 socket 모듈을 이용하여 UDP 소켓을 구현 
 
+
 ## (5) HTTP 요청 및 응답 처리  
 HTTP(Hypertext Transfer Protocol)는 클라이언트와 서버 간의 데이터 전송을 위해 사용되는 프로토콜, 요청과 응답으로 구성, Python에서는 requests 라이브러리를 이용하여 HTTP 요청을 생성하고 전송
 HTTP 응답에는 상태 코드가 포함, ##(1) OK, ##(1) Bad Request, ##(1) Not Found, ##(1) Internal Server Error 등 상태 코드에 따라 서버의 응답을 확인 
