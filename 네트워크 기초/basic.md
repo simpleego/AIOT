@@ -36,4 +36,4 @@ Python에서는 requests 라이브러리를 통해 RESTful API를 호출 가능,
 BeautifulSoup는 웹페이지의 HTML을 분석하고 조작하기 위한 Python 라이브러리, Selenium은 웹 브라우저를 제어할 수 있는 자동화 도구 
 
 ## 참고 사이트
-- https://gdngy##(1)tistory##(1)com/##(1)
+- https://gdngy.tistory.com/133
