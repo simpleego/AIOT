@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>기본차트</title>
+    <style>
+        #container{
+            width: 900px;
+            margin: 20px auto;
+            border: 10px solid #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <canvas id="myChart" width="900" height="500"></canvas>
+        <div id="status">Loading...</div>
+    </div>
+    <script>
+        let chart;
+
+        async function fetchData() {
+           const res = await fetch("http://localhost:8000/data");
+           return await res.json();               
+        }
+
+        async function updateChart() {
+            const data = await fetchData();
+
+            chart.data.labels = data.map(d=>d.time);
+            chart.data.datasets[0].data = data.map(d=>d.value);
+            chart.update();            
+        }
+
+        async function initChart() {
+            const data = await fetchData();
+
+            chart = new Chart(myChart, {
+                type: 'line',
+                data: {                
+                    labels: data.map(d=>d.time),
+                    datasets: [{
+                        label:"realtime Data",
+                        data: data.map(d=>d.value),
+                        borderWidth: 2
+                    }]
+                },
+                options: { responsive: false}
+            });
+            
+            setInterval(updateChart, (3000));
+        }
+
+        initChart();
+    </script>
+</body>
+</html>
