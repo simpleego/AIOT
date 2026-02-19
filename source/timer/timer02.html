@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let count = 0
+        let count3 = 0
+
+        function repeatTask(){
+            console.log("count: ",count)
+            count++;
+            if(count < 5){
+                setTimeout(repeatTask,1000);
+            }
+        }
+
+        function timerTask(){
+            console.log("count3: ",count3)
+            count3++;
+            if(count3 < 5){
+                setTimeout(timerTask,3000);
+            }
+        }
+
+        repeatTask();
+        timerTask();
+
+    </script>
+</body>
+</html>

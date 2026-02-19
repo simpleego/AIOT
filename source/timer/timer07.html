@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>시계 : <span id="timer"></span></p>
+    <script>
+        $timer = document.getElementById("timer");
+        
+        const timer = setInterval(()=>{
+            const now = new Date();
+            $timer.innerHTML = now.getHours() + ":"+
+                               now.getMinutes()+":"+
+                               now.getSeconds();
+        }, 1000)
+    </script>
+</body>
+</html>
