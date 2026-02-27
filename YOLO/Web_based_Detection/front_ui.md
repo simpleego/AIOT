@@ -1,4 +1,4 @@
-
+```html
 <script>
   const apiBase = "http://localhost:8000";
 
@@ -55,3 +55,4 @@
     </pre>
   </section>
 </main>
+```
